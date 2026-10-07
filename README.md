@@ -1,15 +1,24 @@
-# Elysia with Bun runtime
+## Swag
 
-## Getting Started
-To get started with this template, simply paste this command into your terminal:
+Clean elysia backend
+
+### Stack
+
+[Bun](https://bun.com/)
+[Drizzle](https://orm.drizzle.team/)
+[PostgreSQL](https://www.postgresql.org/)
+[Redis](https://redis.io/)
+[Biome](https://biomejs.dev)
+
+### Setup
+
 ```bash
-bun create elysia ./elysia-example
+bun install && cp .env.example .env
 ```
 
-## Development
-To start the development server run:
-```bash
-bun run dev
-```
+After configuring `DATABASE_URL` in `.env`, generate/apply the migrations
 
-Open http://localhost:3000/ with your browser to see the result.
+```bash
+bun run db:generate
+bun run db:migrate
+```
